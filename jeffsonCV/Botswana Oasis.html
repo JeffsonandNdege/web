@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&display=swap">
+<title>Oasis Project in Botswana</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: beige;
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333; /* Dark background color for header */
+        color: white;
+        text-align: center;
+        padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; /* Align items with space between */
+            align-items: center; /* Vertically center items */
+        }
+             .logo {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-left: auto; /* Push logo to the right */
+        }
+     .logo {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 20px; /* Add margin to separate from the title */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+   }
+    h1, h2 {
+        font-family: "Times New Roman", serif; /* Beautiful font for headings */
+        text-align: center;
+        margin: 20px 0;
+    
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image {
+        margin: 10px;
+    }
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    .intro {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+    footer {
+        background-color: #333; /* Dark background color for footer */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+       
+        bottom: 0;
+        width: 100%;
+    }
+      h4 {
+        font-family: 'Allura', cursive;
+        font-size: 24px;
+        font-weight: normal;
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+    <h1>Oasis Project in Botswana</h1>
+    <img class="logo" src="REALESTATE.png" alt="Logo">
+    <a href="personal portfolio.html" target="_blank">&#127968;</a>
+</header>
+<H1><I>NARA OASIS</I></H1>
+    <div class="gallery">
+        <div class="image">
+            <img src="OA1.jpeg" alt="Image 1">
+        </div>
+        <div class="image">
+            <img src="OA2.jpeg" alt="Image 2">
+        </div>
+        <div class="image">
+            <img src="OA3.jpeg" alt="Image 3">
+        </div>
+        <div class="image">
+            <img src="OA4.jpeg" alt="Image 4">
+        </div>
+        <div class="image">
+            <img src="OA5.jpeg" alt="Image 5">
+        </div>
+        <!-- Add more image divs as needed -->
+    </div>
+    <div class="description">
+        <div class="buttons">
+        <button onclick="prevImage()">Previous</button>
+        <button onclick="nextImage()">Next</button>
+    </div>
+    <BR>
+    <header>
+        <h2>COST BREAKDOWN</h2></header>
+        <h2>Total Cost: 150 million ksh</h2>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Cost (in million ksh)</th>
+            </tr>
+            <tr>
+                <td>Construction materials</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Labor</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Land acquisition</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Permits and fees</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Contingency</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div>
+    <div class="intro">
+        <h2>Introduction</h2>
+        <p>Welcome to our Oasis Project in Botswana! Our resort offers a range of amenities and services including:</p>
+        
+            <P>~Luxurious accommodations</P>
+            <P>~Swimming pools</P>
+            <P>~Spa and wellness center</P>
+            <P>~Restaurants and bars</P>
+            <P>~Outdoor activities</P>
+
+            <hr>
+
+            <h3><I>Message From The Managing Director</I></h3>
+            <h4><p>Dear Guests,</p>
+                <p>It is with great pleasure that I welcome you to our luxury resort. Nestled in the heart of paradise, our resort offers a sanctuary of relaxation and indulgence, where every moment is crafted to ensure your stay is truly unforgettable.
+    From our world-class accommodations to our exquisite dining options and rejuvenating spa treatments, we strive to provide you with an unparalleled experience of luxury and comfort.
+    Whether you are here to unwind on our pristine beaches, explore the rich culture and natural beauty of our surroundings, or simply enjoy the tranquility of our resort, we are committed to exceeding your expectations in every way possible.
+    On behalf of our entire team, I extend a warm welcome and invite you to immerse yourself in the luxury and hospitality that define our resort.</p>
+</h4>
+    <h4><p>Best regards,</p></h4>
+    <h4><p class="signature">~Jeffson Angila<br>Managing Director</p></h4>
+        
+    </div>
+   
+</div>
+<script>
+    let currentImage = 0;
+    const images = ["OA1.jpeg", "OA2.jpeg","OA3.jpeg","OA4.jpeg","OA5.jpeg"]; // Add more image URLs as needed
+
+    function showImage(index) {
+        const gallery = document.querySelector(".gallery");
+        gallery.innerHTML = `<div class="image"><img src="${images[index]}" alt="Image ${index + 1}"></div>`;
+    }
+
+    function prevImage() {
+        currentImage = (currentImage - 1 + images.length) % images.length;
+        showImage(currentImage);
+    }
+
+    function nextImage() {
+        currentImage = (currentImage + 1) % images.length;
+        showImage(currentImage);
+    }
+
+    showImage(currentImage);
+
+</script>
+</body>
+</html>
+<footer>
+    <p>copyright & copy; 2024 <B>ANGILA & CO.</B> All rights reserved.</p>
+</footer>
+</body>
+</html>
